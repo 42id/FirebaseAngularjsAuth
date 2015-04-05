@@ -15,6 +15,7 @@ This project illustrates:
 * Secure user profile information within Firebase
 
 Feel free to ping us at @TheLatestBrian or @YanamegaInfo if you have any questions or comments.
+
 Check out the [Live example](http://firebaseauth.azurewebsites.net/)
 
 Read more at www.42id.com
