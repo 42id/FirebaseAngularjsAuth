@@ -16,8 +16,6 @@ This project illustrates:
 
 Feel free to ping us at @TheLatestBrian or @YanamegaInfo if you have any questions or comments.
 
-Check out the [Live example](http://firebaseauth.azurewebsites.net/)
-
-Read more at www.42id.com
+Check out the [live example here](http://firebaseauth.azurewebsites.net/) and read more at www.42id.com
 
 
