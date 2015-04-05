@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body ng-app="app">
+
+    <div class="container">
+        <header class="header">
+            <h1>Firebase Authentication
+      <span>A demo of authentication with Google+ and Github using Firebase + AngularJS</span>
+    </h1>
+        </header>
+
+        <section class="content" ng-controller="mainController as mainVm">
+            <div class="box">
+                <button class="button button--isi button--border-thin button--size-s button--round-s"
+                        ng-click="mainVm.navigateTo('home')">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span>Home</span>
+                </button>
+                <button class="button button--isi button--border-thin button--size-s button--round-s"
+                        ng-click="mainVm.navigateTo('authenticated')">
+                    <i class="fa fa-user-secret fa-2x"></i><span>Authenticated</span>
+                </button>
+            </div>
+            <div class="box bg-1">
+                 <ui-view>
+                    <h2>This is where we will write our updates</h2>
+                </ui-view>
+                
+            </div>
+            <div class="box" ng-controller="loginController as vm">
+                <button class="button button--isi button--border-thin button--size-s button--round-s" 
+                        ng-click="vm.googleLogin()" ng-show="!vm.isLoggedIn">
+                    <i class="fa fa-google-plus-square fa-2x"></i>
+                    <span>Google+</span>
+                </button>
+                <button class="button button--isi button--border-thin button--size-s button--round-s"
+                        ng-click="vm.githubLogin()" ng-show="!vm.isLoggedIn">
+                    <i class="fa fa-github fa-2x"></i>
+                    <span>Github</span>
+                </button>
+                
+                <button class="button button--isi button--border-thin button--size-s button--round-s"
+                        ng-click="vm.logout()" ng-show="vm.isLoggedIn">
+                    <i class="fa fa-sign-out fa-2x"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+    <script src="javascripts/app/app.js"></script>
+    <script src="javascripts/app/main.controller.js"></script>
+    <script src="javascripts/app/login.controller.js"></script>
+</body>
+
+</html>
